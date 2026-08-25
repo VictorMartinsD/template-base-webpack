@@ -1,4 +1,4 @@
-import "./css/index.css";
+import "./css/styles.css";
 import { initTheme } from "./features/theme/theme.js";
 
 document.documentElement.classList.add("ready");

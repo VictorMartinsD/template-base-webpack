@@ -15,7 +15,7 @@ project/
 ├─ src/
 │  ├─ assets/
 │  ├─ components/
-│  ├─ css/
+│  ├─ styles/
 │  ├─ features/
 │  ├─ services/
 │  ├─ utils/
