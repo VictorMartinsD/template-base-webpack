@@ -1,0 +1,26 @@
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  /* Lógica de Carregamento (FOUC) */
+  opacity: 0;
+}
+
+.ready body {
+  opacity: 1;
+  transition: opacity 0s ease-in;
+}
+
+/* Definições globais dos SVGs */
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+  transition: color 0.2s ease;
+}
