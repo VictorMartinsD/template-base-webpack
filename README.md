@@ -11,9 +11,10 @@ Este projeto foi adaptado para seguir o padrão mais comum de estrutura de aplic
 ```text
 project/
 ├─ public/
+│  ├─ assets/
+│  │  └─ favicon.png
 │  └─ index.html
 ├─ src/
-│  ├─ assets/
 │  ├─ components/
 │  ├─ styles/
 │  ├─ features/
