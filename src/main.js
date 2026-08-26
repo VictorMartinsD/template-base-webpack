@@ -1,4 +1,7 @@
-import "./css/styles.css";
+import "./styles/reset.css";
+import "./styles/variables.css";
+import "./styles/global.css";
+
 import { initTheme } from "./features/theme/theme.js";
 
 document.documentElement.classList.add("ready");
