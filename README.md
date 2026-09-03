@@ -1,6 +1,6 @@
 # Template Base Webpack + Babel
 
-Template base para projetos frontend com JavaScript, Webpack, Babel, ESLint, Prettier e Husky.
+Template base para projetos frontend com JavaScript, Webpack, Babel, ESLint, Stylelint, Prettier e Husky.
 
 ## Visão geral
 
@@ -10,18 +10,22 @@ Este projeto foi adaptado para seguir o padrão mais comum de estrutura de aplic
 
 ```text
 project/
+├─ .vscode/
+│ └─ settings.json
 ├─ public/
-│  ├─ assets/
-│  │  └─ favicon.png
-│  └─ index.html
+│ ├─ assets/
+│ │ └─ favicon.png
+│ └─ index.html
 ├─ src/
-│  ├─ components/
-│  ├─ styles/
-│  ├─ features/
-│  ├─ services/
-│  ├─ utils/
-│  └─ main.js
+│ ├─ components/
+│ ├─ styles/
+│ ├─ features/
+│ ├─ services/
+│ ├─ utils/
+│ └─ main.js
+├─ .gitattributes
 ├─ .gitignore
+├─ .stylelintrc.json
 ├─ babel.config.js
 ├─ package.json
 ├─ webpack.config.js
@@ -71,8 +75,9 @@ npm run preview
 | Desenvolvimento | `npm run dev`      | Inicia o servidor Webpack Dev Server em modo desenvolvimento |
 | Build           | `npm run build`    | Gera a versão otimizada para produção em `dist/`             |
 | Preview         | `npm run preview`  | Sobe um servidor local para testar a build final             |
-| Lint            | `npm run lint`     | Executa a análise estática com ESLint                        |
-| Auto-fix        | `npm run lint:fix` | Corrige automaticamente os problemas apontados pelo ESLint   |
+| Lint JS         | `npm run lint`     | Executa a análise estática no JavaScript com ESLint          |
+| Auto-fix JS     | `npm run lint:fix` | Corrige automaticamente os problemas apontados pelo ESLint   |
+| Lint CSS        | `npm run lint:css` | Executa a verificação estática do código CSS com Stylelint   |
 | Formatação      | `npm run format`   | Formata os arquivos com Prettier                             |
 
 ## Configuração do Webpack
@@ -90,12 +95,18 @@ A configuração principal está em `webpack.config.js` e inclui:
 
 A transpilação está centralizada em `babel.config.js` e usa `@babel/preset-env` para compatibilidade com navegadores modernos.
 
+## Padronização de Código e Linters
+
+- **ESLint:** Faz a verificação estática das boas práticas no JavaScript.
+- **Stylelint:** Garante a qualidade, organização e padrões do CSS (configurado em `.stylelintrc.json`).
+- **Prettier:** Gerencia a formatação visual automática de todo o código.
+
 ## Boas práticas
 
 - Mantenha a lógica do app em `src/` e o HTML base em `public/`.
 - Evite deixar arquivos de configuração de outros bundlers no projeto.
 - Use `npm ci` quando quiser instalar as dependências exatamente conforme o `package-lock.json`.
-- Use `npm run lint` antes de finalizar uma tarefa e `npm run build` antes de publicar.
+- Use `npm run lint` e `npm run lint:css` antes de finalizar uma tarefa e `npm run build` antes de publicar.
 
 ---
 
