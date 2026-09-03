@@ -25,6 +25,7 @@ project/
 │ └─ main.js
 ├─ .gitattributes
 ├─ .gitignore
+├─ .stylelintignore
 ├─ .stylelintrc.json
 ├─ babel.config.js
 ├─ package.json
@@ -70,15 +71,16 @@ npm run preview
 
 ## Scripts disponíveis
 
-| Etapa           | Comando            | Descrição                                                    |
-| :-------------- | :----------------- | :----------------------------------------------------------- |
-| Desenvolvimento | `npm run dev`      | Inicia o servidor Webpack Dev Server em modo desenvolvimento |
-| Build           | `npm run build`    | Gera a versão otimizada para produção em `dist/`             |
-| Preview         | `npm run preview`  | Sobe um servidor local para testar a build final             |
-| Lint JS         | `npm run lint`     | Executa a análise estática no JavaScript com ESLint          |
-| Auto-fix JS     | `npm run lint:fix` | Corrige automaticamente os problemas apontados pelo ESLint   |
-| Lint CSS        | `npm run lint:css` | Executa a verificação estática do código CSS com Stylelint   |
-| Formatação      | `npm run format`   | Formata os arquivos com Prettier                             |
+| Etapa           | Comando                | Descrição                                                    |
+| :-------------- | :--------------------- | :----------------------------------------------------------- |
+| Desenvolvimento | `npm run dev`          | Inicia o servidor Webpack Dev Server em modo desenvolvimento |
+| Build           | `npm run build`        | Gera a versão otimizada para produção em `dist/`             |
+| Preview         | `npm run preview`      | Sobe um servidor local para testar a build final             |
+| Lint JS         | `npm run lint`         | Executa a análise estática no JavaScript com ESLint          |
+| Auto-fix JS     | `npm run lint:fix`     | Corrige automaticamente os problemas apontados pelo ESLint   |
+| Lint CSS        | `npm run lint:css`     | Executa a verificação estática do código CSS com Stylelint   |
+| Auto-fix CSS    | `npm run lint:css:fix` | Corrige automaticamente formatação e regras estáticas no CSS |
+| Formatação      | `npm run format`       | Formata os arquivos com Prettier                             |
 
 ## Configuração do Webpack
 
@@ -98,7 +100,7 @@ A transpilação está centralizada em `babel.config.js` e usa `@babel/preset-en
 ## Padronização de Código e Linters
 
 - **ESLint:** Faz a verificação estática das boas práticas no JavaScript.
-- **Stylelint:** Garante a qualidade, organização e padrões do CSS (configurado em `.stylelintrc.json`).
+- **Stylelint:** Garante a qualidade, organização e padrões do CSS (configurado em `.stylelintrc.json`). O projeto conta com `.stylelintignore` para evitar checagens em arquivos de build (`dist/`).
 - **Prettier:** Gerencia a formatação visual automática de todo o código.
 
 ## Boas práticas
